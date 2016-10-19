@@ -1,0 +1,65 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+         version="2.0">
+ 
+     <tlib-version>1.0</tlib-version>
+     <short-name>Ui Tab Library</short-name>
+     <uri>http://todo/taglib</uri>
+    <tag>
+        <description>Tag that highlights patterns in its body content with a given css style</description>
+        <name>highlight</name>
+        <tag-class>com.ttnd.todo.tags.HighlightTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>pattern</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>cssClass</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>caseSensitive</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>Tag to transcode todo priority to icon value</description>
+        <name>priorityIcon</name>
+        <tag-class>com.ttnd.todo.tags.PriorityIconTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>priority</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>Tag to transcode todo status to label value</description>
+        <name>statusLabel</name>
+        <tag-class>com.ttnd.todo.tags.StatusLabelTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>status</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>Tag to transcode todo status to css style</description>
+        <name>statusStyle</name>
+        <tag-class>com.ttnd.todo.tags.StatusStyleTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>status</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>
